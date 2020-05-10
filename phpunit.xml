@@ -15,6 +15,13 @@
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">./app</directory>
+            <exclude>
+                <!-- Exclude some Laravel defaults we don't care about. -->
+                <directory>./app/Console</directory>
+                <directory>./app/Exceptions</directory>
+                <directory>./app/Http/Middleware</directory>
+                <file>./app/Providers/BroadcastServiceProvider.php</file>
+            </exclude>
         </whitelist>
     </filter>
     <php>
